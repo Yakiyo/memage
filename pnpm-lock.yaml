@@ -18,6 +18,9 @@ devDependencies:
   '@types/react':
     specifier: 18.2.6
     version: 18.2.6
+  husky:
+    specifier: ^8.0.3
+    version: 8.0.3
   rome:
     specifier: ^12.1.1
     version: 12.1.1
@@ -296,6 +299,12 @@ packages:
 
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
+    dev: true
+
+  /husky@8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /js-tokens@4.0.0:
