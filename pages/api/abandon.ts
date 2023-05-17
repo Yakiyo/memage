@@ -10,5 +10,5 @@ export default async function handler(request: NextApiRequest, response: NextApi
 	}
 	const canvas = await canvasFromImage('abandon');
 	response.setHeader('Content-Type', 'image/png');
-	response.send(canvas.toBuffer("image/png"));
+	response.send(canvas.toBuffer('image/png'));
 }

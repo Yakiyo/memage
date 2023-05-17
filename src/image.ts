@@ -12,13 +12,13 @@ export async function canvasFromImage(file: string): Promise<Canvas> {
 			return null;
 		},
 	);
-    if (!bgFile) {
-        throw 'Could not fetch file';
-    }
-    const bg = new Image();
-    bg.src = bgFile;
+	if (!bgFile) {
+		throw 'Could not fetch file';
+	}
+	const bg = new Image();
+	bg.src = bgFile;
 	const canvas = createCanvas(bg.width, bg.height);
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(bg, 0 , 0);
-    return canvas;
+	const ctx = canvas.getContext('2d');
+	ctx.drawImage(bg, 0, 0);
+	return canvas;
 }
