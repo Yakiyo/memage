@@ -6,26 +6,26 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-		  "recommended": true,
-		  "suspicious": {
-			"noExplicitAny": "off"
-		  }
+			"recommended": true,
+			"suspicious": {
+				"noExplicitAny": "off"
+			}
 		}
-	  },
-	  "formatter": {
+	},
+	"formatter": {
 		"enabled": true,
 		"formatWithErrors": false,
 		"indentStyle": "tab",
 		"indentSize": 4,
 		"lineWidth": 100,
 		"ignore": []
-	  },
-	  "javascript": {
+	},
+	"javascript": {
 		"formatter": {
-		  "quoteStyle": "single"
+			"quoteStyle": "single"
 		}
-	  },
-	  "files": {
+	},
+	"files": {
 		"ignore": [".next/**"]
-	  }
+	}
 }
