@@ -1,14 +1,14 @@
+import { canvasFromImage } from '@/image';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(request: NextApiRequest, response: NextApiResponse) {
+export default async function handler(request: NextApiRequest, response: NextApiResponse) {
 	const text = request.query.text;
 	if (!text || typeof text !== 'string') {
 		return response.status(400).json({
 			message: 'Missing required parameter `text` in query',
 		});
 	}
-	response.status(200).json({
-		name: 'John doe',
-		age: 56,
-	});
+	const canvas = await canvasFromImage('abandon');
+	response.setHeader('Content-Type', 'image/png');
+	response.send(canvas.toBuffer("image/png"));
 }
