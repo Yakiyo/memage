@@ -12,6 +12,7 @@
     "@napi-rs/canvas": "^0.1.40",
     "@types/node": "20.1.7",
     "next": "13.4.2",
+    "next-swagger-doc": "^0.3.6",
     "typescript": "5.0.4"
   },
   "devDependencies": {
