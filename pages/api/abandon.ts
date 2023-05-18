@@ -1,6 +1,15 @@
 import { canvasFromImage } from '@/image';
 import { NextApiRequest, NextApiResponse } from 'next';
 
+/**
+ * @swagger
+ * /api/abandon:
+ *   get:
+ *     description: Returns image
+ *     responses:
+ *       200:
+ *         description: image/png
+ */
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
 	const text = request.query.text;
 	if (!text || typeof text !== 'string') {
