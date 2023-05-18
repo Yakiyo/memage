@@ -1,14 +1,13 @@
 import { withSwagger } from 'next-swagger-doc';
+import { swaggerDefinitions } from '@/swagger';
 
-const swaggerHandler = withSwagger({
-  definition: {
-    openapi: '3.0.0',
-    info: {
-      title: 'Imitari',
-      version: '0.1.0',
-    },
-  },
-  apiFolder: 'pages/api',
-});
-
-export default swaggerHandler();
+/**
+ * @swagger
+ * /api:
+ *   get:
+ *     description: Returns json data of endpoints
+ *     responses:
+ *       200:
+ *         description: JSON
+ */
+export default withSwagger(swaggerDefinitions)();
