@@ -2,7 +2,7 @@ import { withSwagger } from 'next-swagger-doc';
 import { swaggerDefinitions } from '@/swagger';
 
 /**
- * @swagger
+ * @openapi
  * /api:
  *   get:
  *     description: Returns json data of endpoints

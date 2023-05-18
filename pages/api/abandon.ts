@@ -2,7 +2,7 @@ import { canvasFromImage } from '@/image';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 /**
- * @swagger
+ * @openapi
  * /api/abandon:
  *   get:
  *     description: Returns image
