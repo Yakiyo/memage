@@ -24,6 +24,9 @@ devDependencies:
   '@types/react':
     specifier: 18.2.6
     version: 18.2.6
+  '@types/swagger-ui-react':
+    specifier: ^4.18.0
+    version: 4.18.0
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -658,6 +661,12 @@ packages:
 
   /@types/scheduler@0.16.3:
     resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==}
+
+  /@types/swagger-ui-react@4.18.0:
+    resolution: {integrity: sha512-XtvFXmj46Zibe89tFQwSQknrq1NxEtOep2rZuxth7K88tyPEP00FnoA6H7ATYhocAEA4XUWaNHNFWFRl1KX8aQ==}
+    dependencies:
+      '@types/react': 18.2.6
+    dev: true
 
   /@types/unist@2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
