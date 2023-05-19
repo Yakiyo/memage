@@ -1,7 +1,6 @@
-import { TypedNextApiResponse } from 'next-rest-framework/dist/types';
 import { canvasFromImage } from '@/image';
-import { NextApiRequest } from 'next';
 import { defineEndpoints } from '@/nrf';
+import { output } from '@/response';
 import * as y from 'yup';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
@@ -18,22 +17,7 @@ export default defineEndpoints({
 				})
 				.required(),
 		},
-		output: [
-			{
-				status: 200,
-				contentType: 'image/png',
-				schema: y.mixed<Buffer>().required(),
-			},
-			{
-				status: 400,
-				contentType: 'application/json',
-				schema: y
-					.object({
-						message: y.string().required(),
-					})
-					.required(),
-			},
-		],
+		output,
 		async handler({ req, res }) {
 			// const { text } = req.query;
 			const img = await readFile(join(process.cwd(), './assets/abandon.bmp')).catch(console.error);
