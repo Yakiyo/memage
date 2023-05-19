@@ -1,0 +1,6 @@
+.husky
+node_modules
+LICENSE
+README.md
+rome.json
+.github
