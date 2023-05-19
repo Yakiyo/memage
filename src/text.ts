@@ -37,9 +37,21 @@ export function wrap(ctx: SKRSContext2D, text: string, maxWidth: number): string
  * @param y Abcissa
  * @param lineGap Width of line gaps
  */
-export function render(ctx: SKRSContext2D, text: string[], x: number, y: number, lineGap = 15) {
+export function render(
+	ctx: SKRSContext2D,
+	text: string[],
+	x: number,
+	y: number,
+	maxLines?: number,
+	lineGap = 25,
+) {
 	let gap = y;
-	text.forEach((line) => {
+	let texts = text;
+	if (maxLines && text.length > maxLines) {
+		texts = text.slice(0, maxLines);
+		texts.push(texts.pop()?.replace(/.{0,2}$/, '...') as string);
+	}
+	texts.forEach((line) => {
 		ctx.fillText(line, x, gap);
 		gap += lineGap;
 	});
