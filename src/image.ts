@@ -1,5 +1,3 @@
-import { readFile } from 'fs/promises';
-import { resolve } from 'path';
 import { type Canvas, Image, createCanvas } from '@napi-rs/canvas';
 
 /**
