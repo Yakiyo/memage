@@ -4,7 +4,10 @@ import { join } from 'path';
 /**
  * Utility function to generate canvas from an asset image
  */
-export async function canvasFromImage(bgFile: Buffer): Promise<Canvas> {
+export async function canvasFromImage(bgFile: Buffer): Promise<{
+	canvas: Canvas;
+	image: Image;
+}> {
 	const bg = new Image();
 	bg.src = bgFile;
 	const canvas = createCanvas(bg.width, bg.height);
@@ -12,5 +15,5 @@ export async function canvasFromImage(bgFile: Buffer): Promise<Canvas> {
 	const ctx = canvas.getContext('2d');
 	ctx.drawImage(bg, 0, 0);
 	ctx.font = '24px verdana';
-	return canvas;
+	return { canvas, image: bg };
 }
