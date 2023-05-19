@@ -4,7 +4,7 @@ const config = {
 		return [
 			{
 				source: '/',
-				destination: 'https://github.com/Yakiyo/imitari',
+				destination: 'https://github.com/Yakiyo/memage',
 				permanent: false,
 			},
 		];

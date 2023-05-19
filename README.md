@@ -1,4 +1,4 @@
-# imitari
+# memage
 
 An image manipulation api used for creating meme-ish images. This is an attempt to recreate [`DankMemer/imgen`](https://github.com/DankMemer/imgen) with better docs and such.
 
@@ -24,7 +24,7 @@ The repo is setup to work with [vercel](https://vercel.com) as it will be deploy
 ## Contributing
 - Clone repo
 ```bash
-$ git clone https://github.com/Yakiyo/imitari
+$ git clone https://github.com/Yakiyo/memage
 ```
 - Set it up. See [Development](#development)
 - Create new branch
@@ -38,6 +38,6 @@ This project is a recreation of DankMemer api's imgen. Images in [`assets/`](./a
 
 ## Author
 
-**imitari** © [Yakiyo](https://github.com/Yakiyo). Authored and maintained by Yakiyo.
+**memage** © [Yakiyo](https://github.com/Yakiyo). Authored and maintained by Yakiyo.
 
 Released under [MIT](https://opensource.org/licenses/MIT) License

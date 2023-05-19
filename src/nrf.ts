@@ -5,14 +5,14 @@ export const { defineCatchAllHandler, defineEndpoints } = NextRestFramework({
 	openApiJsonPath: '/api/endpoints.json',
 	openApiYamlPath: '/api/endpoints.yaml',
 	swaggerUiConfig: {
-		title: 'Imitari',
+		title: 'memage',
 		description: 'An image manipulation api used to create niche meme-istic images',
 	},
 	openApiSpecOverrides: {
 		openapi: '3.0.0',
 		info: {
-			title: 'Imitari',
-			version: '1.0.0',
+			title: 'memage',
+			version: '0.1.0',
 			description: 'Image manipulation api to generate meme-ish images',
 			license: {
 				name: 'MIT',
