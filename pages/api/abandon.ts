@@ -3,8 +3,13 @@ import { canvasFromImage } from '@/image';
 import { NextApiRequest } from 'next';
 import { defineEndpoints } from '@/nrf';
 import * as y from 'yup';
+import { readFile } from 'fs/promises';
+import { join } from 'path';
 
 export default defineEndpoints({
+	openApiSpecOverrides: {
+		description: 'Abandoned child image',
+	},
 	GET: {
 		input: {
 			query: y
@@ -30,18 +35,14 @@ export default defineEndpoints({
 			},
 		],
 		async handler({ req, res }) {
-			const text = req.query.text;
-			if (!text || typeof text !== 'string') {
-				return res.status(400).json({
-					message: 'Missing required parameter `text` in query',
-				});
+			// const { text } = req.query;
+			const img = await readFile(join(process.cwd(), './assets/abandon.bmp')).catch(console.error);
+			if (!img) {
+				throw 'Missing image file';
 			}
-			const canvas = await canvasFromImage('abandon');
+			const canvas = await canvasFromImage(img);
 			res.setHeader('Content-Type', 'image/png');
 			res.end(canvas.toBuffer('image/png'));
 		},
-	},
-	openApiSpecOverrides: {
-		description: 'Abandoned child image',
 	},
 });

@@ -5,16 +5,7 @@ import { type Canvas, Image, createCanvas } from '@napi-rs/canvas';
 /**
  * Utility function to generate canvas from an asset image
  */
-export async function canvasFromImage(file: string): Promise<Canvas> {
-	const bgFile = await readFile(resolve(process.cwd(), `./assets/images/${file}.bmp`)).catch(
-		(e) => {
-			console.error(e);
-			return null;
-		},
-	);
-	if (!bgFile) {
-		throw 'Could not fetch file';
-	}
+export async function canvasFromImage(bgFile: Buffer): Promise<Canvas> {
 	const bg = new Image();
 	bg.src = bgFile;
 	const canvas = createCanvas(bg.width, bg.height);
