@@ -20,7 +20,7 @@ export const { defineCatchAllHandler, defineEndpoints } = NextRestFramework({
 		},
 		externalDocs: {
 			description: 'Documentation',
-			url: `https://${process.env.VERCEL_URL ?? 'localhost:3000'}/docs`,
+			url: `https://${process.env.VERCEL_URL ?? 'localhost:3000'}/api`,
 		},
 	},
 });
