@@ -1,0 +1,17 @@
+{
+	"openapi": "3.0.1",
+	"info": {
+		"title": "memage",
+		"description": "Image manipulation api to generate meme-ish images",
+		"version": "0.1.0",
+		"license": {
+			"name": "MIT"
+		}
+	},
+	"components": {},
+	"externalDocs": {
+		"description": "Documentation",
+		"url": "https://localhost:3000/docs"
+	},
+	"paths": {}
+}

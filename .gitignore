@@ -1,8 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# this is not always correct in all environments for some reason. let vercel build the correct one in prod
-openapi.json
-
 # dependencies
 /node_modules
 /.pnp
