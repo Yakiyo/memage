@@ -1,17 +1,70 @@
 {
-	"openapi": "3.0.1",
-	"info": {
-		"title": "memage",
-		"description": "Image manipulation api to generate meme-ish images",
-		"version": "0.1.0",
-		"license": {
-			"name": "MIT"
-		}
-	},
-	"components": {},
-	"externalDocs": {
-		"description": "Documentation",
-		"url": "https://localhost:3000/docs"
-	},
-	"paths": {}
+  "openapi": "3.0.1",
+  "info": {
+    "title": "memage",
+    "description": "Image manipulation api to generate meme-ish images",
+    "version": "0.1.0",
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "components": {},
+  "externalDocs": {
+    "description": "Documentation",
+    "url": "https://localhost:3000/api"
+  },
+  "paths": {
+    "/api/abandon": {
+      "description": "Abandoned child image",
+      "get": {
+        "requestBody": {
+          "content": {}
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "image/png": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An unknown error occurred, trying again might help.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "text",
+            "in": "query"
+          }
+        ]
+      }
+    }
+  }
 }
