@@ -11,7 +11,13 @@
 	"components": {},
 	"externalDocs": {
 		"description": "Documentation",
-		"url": "https://localhost:3000/api"
+		"url": "https://memage.vercel.app/api"
+	},
+	"swaggerUiConfig": {
+		"title": "memage",
+		"description": "Image manipulation api to generate meme-ish images",
+		"logoHref": "",
+		"faviconHref": ""
 	},
 	"paths": {
 		"/api/abandon": {
