@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "rome format --write . && rome check ."
+    "lint": "rome format --write . && rome check .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.40",
