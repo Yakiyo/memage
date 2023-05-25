@@ -23,7 +23,7 @@ export async function canvasFromImage(bgFile: Buffer): Promise<{
  * Utility function to fetch an image from a url. Errors are returned as string.
  * A successfull execution returns an Image instance.
  */
-export async function fetch_image(url: string) {
+export async function fetchImage(url: string) {
 	const { value, error } = await request(url)
 		.then((v) => ({ value: v, error: null }))
 		.catch((e) => ({ value: null, error: e }));
