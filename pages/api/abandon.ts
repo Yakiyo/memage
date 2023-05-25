@@ -5,7 +5,7 @@ import { join } from 'path';
 
 export default defineEndpoints({
 	openApiSpecOverrides: {
-		description: 'Abandoned child image',
+		description: 'Dad abandoned child',
 	},
 	GET: {
 		input: {
