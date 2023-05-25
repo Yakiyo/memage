@@ -1,10 +1,7 @@
-import { canvasFromImage } from '@/image';
-import { defineEndpoints } from '@/nrf';
-import { output } from '@/response';
+import { canvasFromImage, defineEndpoints, output, render, wrap } from '@/index';
 import * as y from 'yup';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
-import { render, wrap } from '@/text';
 
 export default defineEndpoints({
 	openApiSpecOverrides: {
